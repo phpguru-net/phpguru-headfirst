@@ -1,0 +1,39 @@
+{
+  "name": "phpguru-headfirst-2022",
+  "version": "1.0.0",
+  "description": "phpguru headfirst 2022, tailwind, vuejs for blocks",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.4",
+    "add": "^2.0.6",
+    "autoprefixer": "^10.2.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.0",
+    "css-loader": "^5.2.6",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "node-sass": "^6.0.0",
+    "postcss-loader": "^5.3.0",
+    "sass-loader": "^12.0.0",
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.2.17",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "yarn": "^1.22.10"
+  },
+  "author": "",
+  "license": "ISC"
+}
