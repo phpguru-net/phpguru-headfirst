@@ -1,6 +1,6 @@
-const localDomain = "http://phpguru-headfirst.local";
+const localDomain = "http://phpguru-headfirst.local/admin.php";
 const path = require("path");
-const root = path.resolve(__dirname);
+const root = path.resolve(path.join(__dirname, "..", "..", ".."));
 const src = path.resolve(__dirname, "src");
 const dist = path.resolve(__dirname, "dist");
 const webpack = require("webpack");
@@ -8,6 +8,11 @@ const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+
+const entry = {
+  admin: path.resolve(src, "admin.js"),
+  web: path.resolve(src, "web.js"),
+};
 
 const getRules = function (mode) {
   const rules = [
@@ -68,9 +73,10 @@ const getPlugins = function (mode) {
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
       // both options are optional
-      filename: "phpguru.css",
+      filename: "[name].css",
+      chunkFilename: "[name].css",
       //mode !== "production" ? "assets/css/[name]_[hash].css" : "style.css",
-      chunkFilename: "phpguru.css",
+      // chunkFilename: "phpguru.css",
       //mode !== "production" ? "assets/css/[id]_[hash].css" : "style.css",
     }),
     new webpack.ProvidePlugin({
@@ -96,9 +102,7 @@ const getPlugins = function (mode) {
 };
 
 let config = {
-  entry: {
-    phpguru: path.resolve(src, "phpguru.js"),
-  },
+  entry: entry,
   output: {
     filename: "[name].js",
     path: dist,
@@ -130,7 +134,7 @@ module.exports = (env, argv) => {
 
   if (argv.mode === "production") {
     config.output = {
-      filename: "[name].js",
+      filename: "[name].min.js",
       path: dist,
     };
   }

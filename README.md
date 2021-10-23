@@ -30,3 +30,7 @@ Portal:
 - Menu with category
 - List lastest topic
 - List hostest topic
+
+## Heroku Cheatsheet
+
+- https://devcenter.heroku.com/articles/deploying-php#the-procfile

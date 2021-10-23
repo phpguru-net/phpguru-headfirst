@@ -1,0 +1,16 @@
+@import "../node_modules/materialize-css/sass/materialize.scss";
+
+// 0. Fonts
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+// 1. Layout
+
+body.has-fixed-sidenav {
+  padding-left: 300px;
+}
+
+// .sidenav.sidenav-fixed {
+//   left: 0;
+//   position: fixed;
+//   width: 300px;
+// }
