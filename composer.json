@@ -1,0 +1,10 @@
+{
+    "name": "administrator/phpguru-headfirst",
+    "authors": [
+        {
+            "name": "misostack",
+            "email": "misostack.com@gmail.com"
+        }
+    ],
+    "require": {}
+}
