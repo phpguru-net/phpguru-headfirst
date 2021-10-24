@@ -5,11 +5,30 @@
 
 ## Development
 
-Virtual host : phpguru-headfirst.local
+> You must config your proxy as local host or virtual host
+
+Eg: http://phpguru-headfirst.local
+
+```php
+<VirtualHost *:80>
+	DocumentRoot "E:/desk/phpguru-headfirst"
+	ServerName phpguru-headfirst.local
+	ErrorLog E:/desk/php-localhost/logs/phpguru-headfirst_error.log
+	CustomLog E:/desk/php-localhost/logs/phpguru-headfirst_access.log combined
+</VirtualHost>
+```
+
+> Start
 
 ```bash
-cd themes/2022
+cd web/themes/phpguru
 yarn start
+```
+
+> Watch and reload custom url
+
+```bash
+cd web/themes/phpguru && yarn start --env=url=http://phpguru-headfirst.local/admin.php
 ```
 
 ## Excercise

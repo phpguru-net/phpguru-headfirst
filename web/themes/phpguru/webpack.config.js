@@ -1,5 +1,5 @@
-const localDomain = "http://phpguru-headfirst.local/admin.php";
 const path = require("path");
+const LOCAL_DOMAIN = "http://phpguru-headfirst.local"; // DEFAULT
 const root = path.resolve(path.join(__dirname, "..", "..", ".."));
 const src = path.resolve(__dirname, "src");
 const dist = path.resolve(__dirname, "dist");
@@ -67,7 +67,8 @@ const getRules = function (mode) {
   return rules;
 };
 
-const getPlugins = function (mode) {
+const getPlugins = function (mode, env) {
+  const localDomain = env.url || LOCAL_DOMAIN;
   let plugins = [
     new webpack.ProgressPlugin(),
     new MiniCssExtractPlugin({
@@ -82,6 +83,7 @@ const getPlugins = function (mode) {
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
+      "window.jQuery": "jquery",
     }),
     new CopyWebpackPlugin({
       patterns: [{ from: src + "/assets", to: dist + "/assets" }],
@@ -140,7 +142,8 @@ module.exports = (env, argv) => {
   }
 
   config.module.rules = getRules(argv.mode);
-  config.plugins = getPlugins(argv.mode);
+  config.plugins = getPlugins(argv.mode, argv.env);
+  console.error("env", argv.env);
 
   return config;
 };
