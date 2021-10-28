@@ -53,10 +53,10 @@ function get_template_directory_uri()
             </a>
             <div class="collapsible-body">
               <ul class="nav">
-                <li><a href="/pages/admin-dashboard" class="waves-effect">Dashboard<i class="material-icons">web</i></a></li>
-                <li><a href="/pages/admin-fixed-chart" class="waves-effect">Fixed Chart<i class="material-icons">list</i></a></li>
-                <li><a href="/pages/admin-grid" class="waves-effect active">Grid<i class="material-icons">dashboard</i></a></li>
-                <li><a href="/pages/admin-chat" class="waves-effect">Chat<i class="material-icons">chat</i></a></li>
+                <li><a href="/pages/admin-dashboard" class="waves-effect">Dashboard<i>D</i></a></li>
+                <li><a href="/pages/admin-fixed-chart" class="waves-effect">Fixed Chart<i>F</i></a></li>
+                <li><a href="/pages/admin-grid" class="waves-effect active">Grid<i>G</i></a></li>
+                <li><a href="/pages/admin-chat" class="waves-effect">Chat<i>C</i></a></li>
               </ul>
             </div>
           </li>
