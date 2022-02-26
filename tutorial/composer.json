@@ -1,0 +1,20 @@
+{
+    "name": "administrator/tutorial",
+    "authors": [
+        {
+            "name": "misostack",
+            "email": "misostack.com@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "files": ["lib/helpers.php"],
+        "classmap": ["lib"],
+        "psr-0": {
+            "PHPGuru\\Headfirst": "lib/Headfirst"
+        },
+        "psr-4": {
+            "PHPGuru\\PreIntermediate\\": "lib/PreIntermediate/"
+        }
+    }
+}
